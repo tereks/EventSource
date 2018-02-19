@@ -27,7 +27,7 @@ final class EventsDataProvider {
     }
     
     func startListening() {
-        guard eventSource == nil else {
+        guard !isListening else {
             return
         }
         eventSource = createEventSource()

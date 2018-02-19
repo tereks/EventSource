@@ -1,5 +1,5 @@
 //
-//  EventSourceTests.swift
+//  InteractorTest.swift
 //  EventSourceTests
 //
 //  Created by Sergey Kim on 19.02.2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EventSource
 
-class EventSourceTests: XCTestCase {
+class InteractorTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,15 @@ class EventSourceTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInteractorListener() {
+        let interactor = Interactor()
+        XCTAssertTrue( !interactor.dataProvider.isListening )
+        
+        interactor.startListenSSE()
+        XCTAssertTrue( interactor.dataProvider.isListening )
+        
+        interactor.stopListenSSE()
+        XCTAssertTrue( !interactor.dataProvider.isListening )
     }
     
 }

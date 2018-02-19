@@ -10,8 +10,8 @@ import Foundation
 
 final class Interactor {
     
-    private lazy var dataProvider = EventsDataProvider()
-    weak var view: ViewController!
+    private(set) var dataProvider = EventsDataProvider()
+    weak var view: ViewController?
     
     func startListenSSE() {
         guard !dataProvider.isListening else {
@@ -38,7 +38,7 @@ extension Interactor: EventsDataProviderDelegate {
     
     func provider(_ provider: EventsDataProvider, didReceiveMessage message: SourceMessage) {
         if let data = message.data {
-            view.addItem(with: data)
+            view?.addItem(with: data)
         }
     }
 }
