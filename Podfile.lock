@@ -1,0 +1,15 @@
+PODS:
+  - IKEventSource (2.0.0)
+  - Marshal (1.2.4)
+
+DEPENDENCIES:
+  - IKEventSource
+  - Marshal (~> 1.0)
+
+SPEC CHECKSUMS:
+  IKEventSource: 7377db25431c3baed1a09f572468528a77f77d2c
+  Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
+
+PODFILE CHECKSUM: cde254f676b6bc3ca926ea85aba02e2704e02413
+
+COCOAPODS: 1.4.0
