@@ -14,6 +14,11 @@
 		6B2CA36F203AACA60032582D /* ViewControllerTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */; };
 		6B2CA371203AB51C0032582D /* EventsDataProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA370203AB51C0032582D /* EventsDataProviderTest.swift */; };
 		6B2CA373203AB61C0032582D /* InteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA372203AB61C0032582D /* InteractorTest.swift */; };
+		6B2CA37A203B13E50032582D /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA379203B13E50032582D /* MeasurementData.swift */; };
+		6B2CA37C203B14300032582D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CA37B203B14300032582D /* Podfile */; };
+		6B505B6A203BBA9300514067 /* AnyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B69203BBA9300514067 /* AnyJSON.swift */; };
+		6B505B6C203BBFF800514067 /* MeasurementDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B6B203BBFF800514067 /* MeasurementDataTest.swift */; };
+		6B505B6E203BC44F00514067 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B6D203BC44F00514067 /* TableViewCell.swift */; };
 		6BC2642A203A9F8F00FF367C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC26429203A9F8F00FF367C /* AppDelegate.swift */; };
 		6BC2642C203A9F8F00FF367C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2642B203A9F8F00FF367C /* ViewController.swift */; };
 		6BC2642F203A9F8F00FF367C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC2642D203A9F8F00FF367C /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 		6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTablePresenter.swift; sourceTree = "<group>"; };
 		6B2CA370203AB51C0032582D /* EventsDataProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataProviderTest.swift; sourceTree = "<group>"; };
 		6B2CA372203AB61C0032582D /* InteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTest.swift; sourceTree = "<group>"; };
+		6B2CA379203B13E50032582D /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
+		6B2CA37B203B14300032582D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6B505B69203BBA9300514067 /* AnyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyJSON.swift; sourceTree = "<group>"; };
+		6B505B6B203BBFF800514067 /* MeasurementDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataTest.swift; sourceTree = "<group>"; };
+		6B505B6D203BC44F00514067 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6BC26426203A9F8F00FF367C /* EventSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC26429203A9F8F00FF367C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC2642B203A9F8F00FF367C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,9 +89,19 @@
 			path = SSEDataProvider;
 			sourceTree = "<group>";
 		};
+		6B2CA378203B13CD0032582D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CA379203B13E50032582D /* MeasurementData.swift */,
+				6B505B69203BBA9300514067 /* AnyJSON.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6BC2641D203A9F8F00FF367C = {
 			isa = PBXGroup;
 			children = (
+				6B2CA37B203B14300032582D /* Podfile */,
 				6BC26428203A9F8F00FF367C /* EventSource */,
 				6BC2643D203A9F8F00FF367C /* EventSourceTests */,
 				6BC26427203A9F8F00FF367C /* Products */,
@@ -105,10 +125,12 @@
 				6BC26429203A9F8F00FF367C /* AppDelegate.swift */,
 				6BC2642B203A9F8F00FF367C /* ViewController.swift */,
 				6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */,
+				6B505B6D203BC44F00514067 /* TableViewCell.swift */,
 				6B2CA36C203AAB390032582D /* Interactor.swift */,
 				6B2CA367203AA8350032582D /* SSEDataProvider */,
-				6BC26430203A9F8F00FF367C /* Assets.xcassets */,
+				6B2CA378203B13CD0032582D /* Models */,
 				6BC2642D203A9F8F00FF367C /* Main.storyboard */,
+				6BC26430203A9F8F00FF367C /* Assets.xcassets */,
 				6BC26432203A9F8F00FF367C /* LaunchScreen.storyboard */,
 				6BC26435203A9F8F00FF367C /* Info.plist */,
 				6B2CA36A203AA8A80032582D /* ApplicationData.swift */,
@@ -120,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2CA370203AB51C0032582D /* EventsDataProviderTest.swift */,
+				6B505B6B203BBFF800514067 /* MeasurementDataTest.swift */,
 				6B2CA372203AB61C0032582D /* InteractorTest.swift */,
 				6BC26440203A9F8F00FF367C /* Info.plist */,
 			);
@@ -231,6 +254,7 @@
 			files = (
 				6BC26434203A9F8F00FF367C /* LaunchScreen.storyboard in Resources */,
 				6BC26431203A9F8F00FF367C /* Assets.xcassets in Resources */,
+				6B2CA37C203B14300032582D /* Podfile in Resources */,
 				6BC2642F203A9F8F00FF367C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +332,10 @@
 				6B2CA36F203AACA60032582D /* ViewControllerTablePresenter.swift in Sources */,
 				6B2CA369203AA8590032582D /* EventsDataProvider.swift in Sources */,
 				6BC2642C203A9F8F00FF367C /* ViewController.swift in Sources */,
+				6B505B6E203BC44F00514067 /* TableViewCell.swift in Sources */,
 				6B2CA36D203AAB390032582D /* Interactor.swift in Sources */,
+				6B2CA37A203B13E50032582D /* MeasurementData.swift in Sources */,
+				6B505B6A203BBA9300514067 /* AnyJSON.swift in Sources */,
 				6B2CA36B203AA8A80032582D /* ApplicationData.swift in Sources */,
 				6BC2642A203A9F8F00FF367C /* AppDelegate.swift in Sources */,
 			);
@@ -318,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B505B6C203BBFF800514067 /* MeasurementDataTest.swift in Sources */,
 				6B2CA373203AB61C0032582D /* InteractorTest.swift in Sources */,
 				6B2CA371203AB51C0032582D /* EventsDataProviderTest.swift in Sources */,
 			);

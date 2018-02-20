@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var actionBarButton: UIBarButtonItem!
     
     private var interactor: Interactor!
     private var tablePresenter: TablePresenter!
@@ -29,16 +30,26 @@ class ViewController: UIViewController {
     private func configureInteractor() {
         interactor = Interactor()
         interactor.view = self
-        interactor.startListenSSE()
     }
     
     private func configureTablePresenter() {
         tablePresenter = TablePresenter(tableView: tableView)
     }
     
-    func addItem(with data: String) {
-        tablePresenter.addItem(data)
+    func addItems(_ items: [MeasurementData]) {
+        tablePresenter.addItems(items)
         tablePresenter.reloadData()
+    }
+    
+    @IBAction func actionBarButtonSelected(_ sender: UIBarButtonItem) {
+        if interactor.dataProvider.isListening {
+            interactor.stopListenSSE()
+            actionBarButton.title = "Start"
+        }
+        else {
+            interactor.startListenSSE()
+            actionBarButton.title = "Stop"
+        }
     }
 }
 

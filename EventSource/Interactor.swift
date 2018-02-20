@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Marshal
 
 final class Interactor {
     
     private(set) var dataProvider = EventsDataProvider()
+    private var decodingQueue = OperationQueue()
+    
     weak var view: ViewController?
     
     func startListenSSE() {
@@ -23,6 +26,17 @@ final class Interactor {
     
     func stopListenSSE() {
         dataProvider.stopListening()
+    }
+    
+    private func decode(data: Data) -> [MeasurementData] {
+        do {
+            let results = try JSONDecoder().decode([MeasurementData].self, from: data)
+            return results
+        }
+        catch {
+            print("\(error)")
+        }
+        return []
     }
 }
 
@@ -37,8 +51,18 @@ extension Interactor: EventsDataProviderDelegate {
     }
     
     func provider(_ provider: EventsDataProvider, didReceiveMessage message: SourceMessage) {
-        if let data = message.data {
-            view?.addItem(with: data)
+        if let jsonString = message.data,
+            let data = jsonString.data(using: .utf8) {
+            
+            let operation: () -> Void = {
+                let results = self.decode(data: data)
+                if !results.isEmpty {
+                    DispatchQueue.main.async {
+                        self.view?.addItems(results)
+                    }
+                }
+            }
+            decodingQueue.addOperation(operation)
         }
     }
 }
