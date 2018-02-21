@@ -1,5 +1,5 @@
 //
-//  ViewControllerTablePresenter.swift
+//  MeasurementsTablePresenter.swift
 //  EventSource
 //
 //  Created by Sergey Kim on 19.02.2018.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class TablePresenter: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class MeasurementsTablePresenter: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var maximumNumberOfCells: Int = 500
-    private var measurements: [MeasurementData] = []
+    private var measurements: [String: MeasurementUIModel] = [:]
     private weak var tableView: UITableView?
     
     init(tableView: UITableView) {
@@ -23,10 +23,9 @@ final class TablePresenter: NSObject, UITableViewDataSource, UITableViewDelegate
         tableView.estimatedRowHeight = 100
     }
     
-    func addItems(_ items: [MeasurementData]) {
-        measurements.insert(items.first!, at: 0)
-        if measurements.count > maximumNumberOfCells {
-            measurements.removeLast()
+    func addItems(_ items: [MeasurementUIModel]) {
+        items.forEach { data in
+            measurements[data.name] = data
         }
     }
     
@@ -43,7 +42,7 @@ final class TablePresenter: NSObject, UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return measurements.count
+        return measurements.values.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +50,8 @@ final class TablePresenter: NSObject, UITableViewDataSource, UITableViewDelegate
             assertionFailure("Invalid cell type")
             return UITableViewCell()
         }
-        cell.configure(with: measurements[indexPath.row])
+        let values = Array(measurements.values)
+        cell.configure(with: values[indexPath.row])
         return cell
     }
 }

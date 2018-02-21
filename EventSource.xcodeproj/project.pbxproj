@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2143BAD599B0A263C2F8823D /* Pods_Abstract_EventSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505092199CD561E25F3889D5 /* Pods_Abstract_EventSource.framework */; };
+		6B294251203C6E5D00EA4724 /* MeasurementUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294250203C6E5D00EA4724 /* MeasurementUIModel.swift */; };
+		6B294258203D08BF00EA4724 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294253203D08BF00EA4724 /* MeasurementsViewController.swift */; };
+		6B294259203D08BF00EA4724 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294255203D08BF00EA4724 /* TableViewCell.swift */; };
+		6B29425A203D08BF00EA4724 /* MeasurementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294256203D08BF00EA4724 /* MeasurementsInteractor.swift */; };
+		6B29425B203D08BF00EA4724 /* MeasurementsTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294257203D08BF00EA4724 /* MeasurementsTablePresenter.swift */; };
+		6B29425D203D099700EA4724 /* MeasurementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29425C203D099700EA4724 /* MeasurementsPresenter.swift */; };
+		6B29425F203D09EE00EA4724 /* MeasurementsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29425E203D09EE00EA4724 /* MeasurementsViewInterface.swift */; };
+		6B294261203D0B9C00EA4724 /* MeasurementsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294260203D0B9C00EA4724 /* MeasurementsConfigurator.swift */; };
 		6B2CA369203AA8590032582D /* EventsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA368203AA8590032582D /* EventsDataProvider.swift */; };
 		6B2CA36B203AA8A80032582D /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA36A203AA8A80032582D /* ApplicationData.swift */; };
-		6B2CA36D203AAB390032582D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA36C203AAB390032582D /* Interactor.swift */; };
-		6B2CA36F203AACA60032582D /* ViewControllerTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */; };
 		6B2CA371203AB51C0032582D /* EventsDataProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA370203AB51C0032582D /* EventsDataProviderTest.swift */; };
 		6B2CA373203AB61C0032582D /* InteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA372203AB61C0032582D /* InteractorTest.swift */; };
 		6B2CA37A203B13E50032582D /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA379203B13E50032582D /* MeasurementData.swift */; };
 		6B2CA37C203B14300032582D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CA37B203B14300032582D /* Podfile */; };
 		6B505B6A203BBA9300514067 /* AnyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B69203BBA9300514067 /* AnyJSON.swift */; };
 		6B505B6C203BBFF800514067 /* MeasurementDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B6B203BBFF800514067 /* MeasurementDataTest.swift */; };
-		6B505B6E203BC44F00514067 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B505B6D203BC44F00514067 /* TableViewCell.swift */; };
 		6BC2642A203A9F8F00FF367C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC26429203A9F8F00FF367C /* AppDelegate.swift */; };
-		6BC2642C203A9F8F00FF367C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2642B203A9F8F00FF367C /* ViewController.swift */; };
 		6BC2642F203A9F8F00FF367C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC2642D203A9F8F00FF367C /* Main.storyboard */; };
 		6BC26431203A9F8F00FF367C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC26430203A9F8F00FF367C /* Assets.xcassets */; };
 		6BC26434203A9F8F00FF367C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC26432203A9F8F00FF367C /* LaunchScreen.storyboard */; };
@@ -39,20 +43,24 @@
 /* Begin PBXFileReference section */
 		016398CD6BF9DF4E16B6F9CD /* Pods-Abstract-EventSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-EventSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-EventSource/Pods-Abstract-EventSource.debug.xcconfig"; sourceTree = "<group>"; };
 		505092199CD561E25F3889D5 /* Pods_Abstract_EventSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_EventSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B294250203C6E5D00EA4724 /* MeasurementUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementUIModel.swift; sourceTree = "<group>"; };
+		6B294253203D08BF00EA4724 /* MeasurementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementsViewController.swift; sourceTree = "<group>"; };
+		6B294255203D08BF00EA4724 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6B294256203D08BF00EA4724 /* MeasurementsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementsInteractor.swift; sourceTree = "<group>"; };
+		6B294257203D08BF00EA4724 /* MeasurementsTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementsTablePresenter.swift; sourceTree = "<group>"; };
+		6B29425C203D099700EA4724 /* MeasurementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsPresenter.swift; sourceTree = "<group>"; };
+		6B29425E203D09EE00EA4724 /* MeasurementsViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsViewInterface.swift; sourceTree = "<group>"; };
+		6B294260203D0B9C00EA4724 /* MeasurementsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsConfigurator.swift; sourceTree = "<group>"; };
 		6B2CA368203AA8590032582D /* EventsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataProvider.swift; sourceTree = "<group>"; };
 		6B2CA36A203AA8A80032582D /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
-		6B2CA36C203AAB390032582D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTablePresenter.swift; sourceTree = "<group>"; };
 		6B2CA370203AB51C0032582D /* EventsDataProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataProviderTest.swift; sourceTree = "<group>"; };
 		6B2CA372203AB61C0032582D /* InteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTest.swift; sourceTree = "<group>"; };
 		6B2CA379203B13E50032582D /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
 		6B2CA37B203B14300032582D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		6B505B69203BBA9300514067 /* AnyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyJSON.swift; sourceTree = "<group>"; };
 		6B505B6B203BBFF800514067 /* MeasurementDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataTest.swift; sourceTree = "<group>"; };
-		6B505B6D203BC44F00514067 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6BC26426203A9F8F00FF367C /* EventSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC26429203A9F8F00FF367C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6BC2642B203A9F8F00FF367C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BC2642E203A9F8F00FF367C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BC26430203A9F8F00FF367C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC26433203A9F8F00FF367C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +89,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B294252203D08BF00EA4724 /* Measurements */ = {
+			isa = PBXGroup;
+			children = (
+				6B29425E203D09EE00EA4724 /* MeasurementsViewInterface.swift */,
+				6B294253203D08BF00EA4724 /* MeasurementsViewController.swift */,
+				6B294257203D08BF00EA4724 /* MeasurementsTablePresenter.swift */,
+				6B29425C203D099700EA4724 /* MeasurementsPresenter.swift */,
+				6B294256203D08BF00EA4724 /* MeasurementsInteractor.swift */,
+				6B294260203D0B9C00EA4724 /* MeasurementsConfigurator.swift */,
+				6B294254203D08BF00EA4724 /* Cells */,
+			);
+			path = Measurements;
+			sourceTree = "<group>";
+		};
+		6B294254203D08BF00EA4724 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B294255203D08BF00EA4724 /* TableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6B2CA367203AA8350032582D /* SSEDataProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2CA379203B13E50032582D /* MeasurementData.swift */,
+				6B294250203C6E5D00EA4724 /* MeasurementUIModel.swift */,
 				6B505B69203BBA9300514067 /* AnyJSON.swift */,
 			);
 			path = Models;
@@ -123,14 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				6BC26429203A9F8F00FF367C /* AppDelegate.swift */,
-				6BC2642B203A9F8F00FF367C /* ViewController.swift */,
-				6B2CA36E203AACA60032582D /* ViewControllerTablePresenter.swift */,
-				6B505B6D203BC44F00514067 /* TableViewCell.swift */,
-				6B2CA36C203AAB390032582D /* Interactor.swift */,
+				6B294252203D08BF00EA4724 /* Measurements */,
 				6B2CA367203AA8350032582D /* SSEDataProvider */,
 				6B2CA378203B13CD0032582D /* Models */,
-				6BC2642D203A9F8F00FF367C /* Main.storyboard */,
 				6BC26430203A9F8F00FF367C /* Assets.xcassets */,
+				6BC2642D203A9F8F00FF367C /* Main.storyboard */,
 				6BC26432203A9F8F00FF367C /* LaunchScreen.storyboard */,
 				6BC26435203A9F8F00FF367C /* Info.plist */,
 				6B2CA36A203AA8A80032582D /* ApplicationData.swift */,
@@ -329,15 +357,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2CA36F203AACA60032582D /* ViewControllerTablePresenter.swift in Sources */,
 				6B2CA369203AA8590032582D /* EventsDataProvider.swift in Sources */,
-				6BC2642C203A9F8F00FF367C /* ViewController.swift in Sources */,
-				6B505B6E203BC44F00514067 /* TableViewCell.swift in Sources */,
-				6B2CA36D203AAB390032582D /* Interactor.swift in Sources */,
+				6B294259203D08BF00EA4724 /* TableViewCell.swift in Sources */,
+				6B294251203C6E5D00EA4724 /* MeasurementUIModel.swift in Sources */,
+				6B29425A203D08BF00EA4724 /* MeasurementsInteractor.swift in Sources */,
 				6B2CA37A203B13E50032582D /* MeasurementData.swift in Sources */,
 				6B505B6A203BBA9300514067 /* AnyJSON.swift in Sources */,
+				6B294258203D08BF00EA4724 /* MeasurementsViewController.swift in Sources */,
+				6B29425D203D099700EA4724 /* MeasurementsPresenter.swift in Sources */,
 				6B2CA36B203AA8A80032582D /* ApplicationData.swift in Sources */,
+				6B29425B203D08BF00EA4724 /* MeasurementsTablePresenter.swift in Sources */,
 				6BC2642A203A9F8F00FF367C /* AppDelegate.swift in Sources */,
+				6B294261203D0B9C00EA4724 /* MeasurementsConfigurator.swift in Sources */,
+				6B29425F203D09EE00EA4724 /* MeasurementsViewInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

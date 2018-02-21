@@ -1,5 +1,5 @@
 //
-//  Interactor.swift
+//  MeasurementsInteractor.swift
 //  EventSource
 //
 //  Created by Sergey Kim on 19.02.2018.
@@ -9,12 +9,12 @@
 import Foundation
 import Marshal
 
-final class Interactor {
+final class MeasurementsInteractor {
     
     private(set) var dataProvider = EventsDataProvider()
     private var decodingQueue = OperationQueue()
     
-    weak var view: ViewController?
+    weak var presenter: MeasurementsPresenter!
     
     func startListenSSE() {
         guard !dataProvider.isListening else {
@@ -28,10 +28,11 @@ final class Interactor {
         dataProvider.stopListening()
     }
     
-    private func decode(data: Data) -> [MeasurementData] {
+    private func decode(data: Data) -> [MeasurementUIModel] {
         do {
             let results = try JSONDecoder().decode([MeasurementData].self, from: data)
-            return results
+            let models = results.map { MeasurementUIModel(data: $0) }
+            return models
         }
         catch {
             print("\(error)")
@@ -40,7 +41,7 @@ final class Interactor {
     }
 }
 
-extension Interactor: EventsDataProviderDelegate {
+extension MeasurementsInteractor: EventsDataProviderDelegate {
     
     func sourceOpened(_ provider: EventsDataProvider) {
         
@@ -51,18 +52,21 @@ extension Interactor: EventsDataProviderDelegate {
     }
     
     func provider(_ provider: EventsDataProvider, didReceiveMessage message: SourceMessage) {
-        if let jsonString = message.data,
-            let data = jsonString.data(using: .utf8) {
-            
-            let operation: () -> Void = {
-                let results = self.decode(data: data)
-                if !results.isEmpty {
-                    DispatchQueue.main.async {
-                        self.view?.addItems(results)
-                    }
+        guard let jsonString = message.data else {
+            return
+        }
+        
+        let operation: () -> Void = {
+            guard let data = jsonString.data(using: .utf8) {
+                return
+            }
+            let results = self.decode(data: data)
+            if !results.isEmpty {
+                DispatchQueue.main.async {
+                    self.presenter.addItems(results)
                 }
             }
-            decodingQueue.addOperation(operation)
         }
+        decodingQueue.addOperation(operation)
     }
 }
